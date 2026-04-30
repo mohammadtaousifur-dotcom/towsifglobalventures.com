@@ -48,6 +48,7 @@
       margin-left: 18px;
       font-size: 14px;
       opacity: 0.9;
+      padding: 8px 0;
     }
 
     nav a:hover {
@@ -165,13 +166,28 @@
       background: #f1f5f9;
       border: 1px dashed #cbd5e1;
       border-radius: 14px;
-      min-height: 260px;
+      min-height: 240px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #64748b;
       text-align: center;
       padding: 20px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-image-placeholder {
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: 260px;
     }
 
     .product-info h3 {
@@ -184,6 +200,12 @@
       color: #475569;
       margin-bottom: 22px;
       font-size: 16px;
+    }
+
+    .product-note {
+      margin-top: 12px;
+      color: #64748b;
+      font-size: 14px;
     }
 
     ul {
@@ -223,6 +245,10 @@
     }
 
     @media (max-width: 900px) {
+      header {
+        padding: 18px 6%;
+      }
+
       .grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -237,11 +263,39 @@
 
       nav a {
         display: inline-block;
-        margin: 8px 12px 0 0;
+        margin: 4px 12px 0 0;
       }
     }
 
     @media (max-width: 600px) {
+      body {
+        line-height: 1.55;
+      }
+
+      header {
+        padding: 16px 6%;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+      }
+
+      nav a {
+        margin: 0;
+        font-size: 13px;
+      }
+
       .grid {
         grid-template-columns: 1fr;
       }
@@ -256,6 +310,58 @@
 
       .hero h1 {
         font-size: 31px;
+      }
+
+      .hero h2 {
+        font-size: 19px;
+        margin-bottom: 16px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        margin-bottom: 22px;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .section-text {
+        font-size: 16px;
+        margin-bottom: 22px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .product-box {
+        padding: 20px;
+        gap: 22px;
+      }
+
+      .product-image {
+        min-height: 200px;
+        padding: 16px;
+      }
+
+      .product-info h3 {
+        font-size: 23px;
+      }
+
+      .product-info p,
+      ul,
+      li {
+        font-size: 15px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .contact-box {
+        padding: 24px;
       }
     }
   </style>
@@ -334,7 +440,7 @@
 
       <div class="product-box">
         <div class="product-image">
-          Product image will be added here
+          <div class="product-image-placeholder">Product image will be added here</div>
         </div>
 
         <div class="product-info">
@@ -342,7 +448,8 @@
           <p>
             A practical kitchen tool designed to help break up and crumble cooked ground meat during everyday meal preparation.
           </p>
-          <a class="btn" href="AMAZON_PRODUCT_LINK_HERE" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+          <a class="btn" href="https://www.amazon.com/dp/B0GL3CD76C" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+          <p class="product-note">Availability and pricing are subject to the Amazon marketplace listing.</p>
         </div>
       </div>
     </section>

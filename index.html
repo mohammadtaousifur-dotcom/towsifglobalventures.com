@@ -62,7 +62,16 @@
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 650px;
     }
 
     .hero h1 {
@@ -86,6 +95,12 @@
       margin-bottom: 30px;
     }
 
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .btn {
       display: inline-block;
       background: #0f172a;
@@ -99,6 +114,52 @@
 
     .btn:hover {
       background: #1e293b;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background: #f8fafc;
+    }
+
+    .hero-product-card {
+      background: #ffffff;
+      border: 1px solid #dbe3ee;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-product-image {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .hero-product-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .hero-product-card h3 {
+      color: #0f172a;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .hero-product-card p {
+      color: #475569;
+      font-size: 15px;
+      margin-bottom: 16px;
+      max-width: none;
     }
 
     section {
@@ -261,6 +322,10 @@
         font-size: 36px;
       }
 
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
       nav a {
         display: inline-block;
         margin: 4px 12px 0 0;
@@ -302,6 +367,10 @@
 
       .hero {
         padding: 70px 6%;
+      }
+
+      .hero-content {
+        gap: 28px;
       }
 
       section {
@@ -360,6 +429,10 @@
         text-align: center;
       }
 
+      .hero-actions {
+        flex-direction: column;
+      }
+
       .contact-box {
         padding: 24px;
       }
@@ -384,12 +457,28 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
-        <h1>Towsif Global Ventures LLC</h1>
-        <h2>E-Commerce Retail & Consumer Product Trading</h2>
-        <p>
-          Towsif Global Ventures LLC is a Wyoming-registered e-commerce retail company focused on sourcing, evaluating, and selling selected consumer products through online retail channels and marketplace platforms.
-        </p>
-        <a class="btn" href="#contact">Contact Us</a>
+        <div class="hero-text">
+          <h1>Towsif Global Ventures LLC</h1>
+          <h2>E-Commerce Retail & Consumer Product Trading</h2>
+          <p>
+            Towsif Global Ventures LLC is a Wyoming-registered e-commerce retail company focused on sourcing, evaluating, and selling selected consumer products through online retail channels and marketplace platforms.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#products">View Product</a>
+            <a class="btn btn-secondary" href="#contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="hero-product-card">
+          <div class="hero-product-image">
+            <img src="meat-chopper-main.png" alt="Black 5-blade meat chopper kitchen tool" />
+          </div>
+          <h3>5-Blade Meat Chopper</h3>
+          <p>
+            A practical kitchen tool designed to help break up and crumble cooked ground meat during everyday meal preparation.
+          </p>
+          <a class="btn" href="https://www.amazon.com/dp/B0GL3CD76C" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+        </div>
       </div>
     </section>
 

@@ -19,6 +19,10 @@
       background: #ffffff;
     }
 
+    html {
+      scroll-padding-top: 90px;
+    }
+
     header {
       background: #0f172a;
       color: #ffffff;
@@ -164,6 +168,7 @@
 
     section {
       padding: 70px 8%;
+      scroll-margin-top: 90px;
     }
 
     .section-title {
@@ -295,6 +300,8 @@
     .contact-box a {
       color: #ffffff;
       font-weight: 600;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     footer {
@@ -434,7 +441,13 @@
       }
 
       .contact-box {
-        padding: 24px;
+        padding: 20px;
+      }
+
+      .contact-box p,
+      .contact-box a {
+        font-size: 14px;
+        line-height: 1.5;
       }
     }
   </style>

@@ -19,8 +19,12 @@
       background: #f3f6fc;
     }
 
+    :root {
+      --header-anchor-offset: 90px;
+    }
+
     html {
-      scroll-padding-top: 90px;
+      scroll-padding-top: var(--header-anchor-offset);
     }
 
     header {
@@ -207,7 +211,7 @@
 
     section {
       padding: 70px 8%;
-      scroll-margin-top: 90px;
+      scroll-margin-top: var(--header-anchor-offset);
     }
 
     .section-title {
@@ -354,6 +358,10 @@
     }
 
     @media (max-width: 900px) {
+      :root {
+        --header-anchor-offset: 110px;
+      }
+
       header {
         padding: 18px 6%;
       }
@@ -381,6 +389,10 @@
     }
 
     @media (max-width: 600px) {
+      :root {
+        --header-anchor-offset: 130px;
+      }
+
       body {
         line-height: 1.55;
       }

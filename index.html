@@ -626,13 +626,13 @@
     }
 
     .contact-box {
-      background: linear-gradient(150deg, #0f172a 0%, #15233c 100%);
+      background: linear-gradient(150deg, #020617 0%, #071a35 48%, #0b2a57 100%);
       color: #ffffff;
       border-radius: var(--radius);
       padding: 34px;
       max-width: 850px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      box-shadow: 0 18px 34px rgba(2, 6, 23, 0.35);
+      border: 1px solid rgba(191, 219, 254, 0.28);
+      box-shadow: 0 18px 34px rgba(2, 6, 23, 0.42);
       animation: fadeSlideUp 0.72s ease-out both;
       position: relative;
       overflow: hidden;
@@ -644,13 +644,13 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(120deg, rgba(56, 189, 248, 0.08), transparent 38%, rgba(251, 191, 36, 0.08));
+      background: linear-gradient(120deg, rgba(59, 130, 246, 0.14), transparent 42%, rgba(14, 165, 233, 0.08));
       pointer-events: none;
     }
 
     .contact-box p {
       margin-bottom: 10px;
-      color: #e2e8f0;
+      color: #f8fafc;
       position: relative;
     }
 
@@ -662,11 +662,14 @@
       overflow-wrap: anywhere;
       word-break: break-word;
       position: relative;
-      transition: color 0.2s ease;
+      text-decoration-color: rgba(191, 219, 254, 0.65);
+      text-underline-offset: 3px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
 
     .contact-box a:hover {
-      color: #bfdbfe;
+      color: #dbeafe;
+      text-decoration-color: #dbeafe;
     }
 
     footer {
